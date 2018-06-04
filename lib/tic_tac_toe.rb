@@ -64,3 +64,10 @@ end
 def over?(board)
   won?(board) || draw?(board)
 end
+
+def winner(board)
+  won_game = won?(board)
+  if won_game
+    board[won_game[0]]
+  end
+end
