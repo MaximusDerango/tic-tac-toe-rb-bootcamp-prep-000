@@ -5,7 +5,7 @@ WIN_COMBINATIONS = [
 ]
 
 def display_board(board)
-  rows = (0..8).step(3).collect{|i| (i..i+2).collect{|j|" #{board[i]} "}}.join("|")
+  rows = (0..8).step(3).collect{|i| (i..i+2).collect{|j|" #{board[i]} "}.join("|")}
   div = "\n" +  "-"*11 + "\n"
   row.join(div)
 end
