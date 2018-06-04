@@ -71,3 +71,20 @@ def winner(board)
     board[won_game[0]]
   end
 end
+
+def play(board)
+  game_over = false
+  until game_over
+    player_to_move = current_player(board)
+    turn(board, player_to_move)
+    game_over = over?(board)
+  end
+  player_win = winner(board)
+  if player_win
+    puts "Congratulations #{player_win}, you win!"
+  else
+    puts "This is a draw"
+  end
+end
+  
+  
