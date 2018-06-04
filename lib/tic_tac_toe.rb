@@ -34,7 +34,7 @@ def turn(board)
     pos = input_to_index(input)
     if valid_move?(board, pos)
       valid_go = true
-      move(board, index, "X")
+      move(board, pos, "X")
       display_board(board)
     end
   end
