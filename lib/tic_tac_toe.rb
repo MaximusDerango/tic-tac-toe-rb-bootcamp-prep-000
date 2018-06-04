@@ -73,11 +73,9 @@ def winner(board)
 end
 
 def play(board)
-  game_over = false
-  until game_over
+  until over?(board)
     player_to_move = current_player(board)
     turn(board, player_to_move)
-    game_over = over?(board)
   end
   player_win = winner(board)
   if player_win
