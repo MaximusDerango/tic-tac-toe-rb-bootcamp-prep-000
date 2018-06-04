@@ -79,9 +79,9 @@ def play(board)
   end
   player_win = winner(board)
   if player_win
-    puts "Congratulations #{player_win}, you win!"
+    puts "Congratulations #{player_win}!"
   else
-    puts "A Draw"
+    puts "Cat's Game!"
   end
 end
   
