@@ -30,7 +30,7 @@ def turn(board)
   valid_go = false
   until valid_go do
     puts "Please enter a number between 1 and 9:"
-    input = gets.strip()
+    input = gets.strip
     pos = input_to_index(input)
     if valid_move?(board, pos)
       valid_go = true
