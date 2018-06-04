@@ -50,5 +50,5 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.collect{|l|
-    l.collect{|x| board[x]}.uniq
+    l.collect{|x| board[x]}.uniq.length == 1 && ["X", "O"].include?(board[l[0]])}
 end
