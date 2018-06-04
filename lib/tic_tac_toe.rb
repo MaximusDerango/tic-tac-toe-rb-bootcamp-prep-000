@@ -26,15 +26,16 @@ def valid_move?(board, index)
   index.between?(0, 8) && !position_taken?(board, index)
 end
 
-def turn(board, token)
+def turn(board)
   valid_go = false
+  player_to_move = current_player(board)
   until valid_go do
     puts "Please enter a number between 1 and 9:"
     input = gets.strip
     pos = input_to_index(input)
     if valid_move?(board, pos)
       valid_go = true
-      move(board, pos, token)
+      move(board, pos, player_to_move)
       display_board(board)
     end
   end
@@ -74,8 +75,7 @@ end
 
 def play(board)
   until over?(board)
-    player_to_move = current_player(board)
-    turn(board, player_to_move)
+    turn(board)
   end
   player_win = winner(board)
   if player_win
