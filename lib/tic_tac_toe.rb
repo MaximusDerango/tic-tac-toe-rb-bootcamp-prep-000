@@ -27,5 +27,5 @@ def valid_move?(board, index)
 end
 
 def turn(board)
-  puts ""
+  puts "Please enter a number between 1 and 9:"
 end
