@@ -52,3 +52,7 @@ def won?(board)
   WIN_COMBINATIONS.detect{|l|
     l.collect{|x| board[x]}.uniq.length == 1 && ["X", "O"].include?(board[l[0]])}
 end
+
+def full?(board)
+  board.all?{|x| x == "X" || x == "O"}
+end
