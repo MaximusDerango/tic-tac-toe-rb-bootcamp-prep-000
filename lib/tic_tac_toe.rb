@@ -26,7 +26,7 @@ def valid_move?(board, index)
   index.between?(0, 8) && !position_taken?(board, index)
 end
 
-def turn(board)
+def turn(board, token)
   valid_go = false
   until valid_go do
     puts "Please enter a number between 1 and 9:"
@@ -34,7 +34,7 @@ def turn(board)
     pos = input_to_index(input)
     if valid_move?(board, pos)
       valid_go = true
-      move(board, pos, "X")
+      move(board, pos, token)
       display_board(board)
     end
   end
