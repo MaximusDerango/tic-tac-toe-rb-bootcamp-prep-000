@@ -9,3 +9,7 @@ def display_board(board)
   div = "\n" +  "-"*11 + "\n"
   puts rows.join(div)
 end
+
+def input_to_index(input)
+  input.to_i - 1
+end
